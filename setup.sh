@@ -12,7 +12,11 @@ sudo pacman -Syu --noconfirm \
         polybar  \
         nano    \
         rofi    \
-        nerd-fonts
+        nerd-fonts \
+        xorg-server \
+        xorg-xinit \
+        lightdm \
+        lightdm-gtk-greeter 
 
 echo -e "Successfully installed packages...\n"
 
@@ -39,5 +43,9 @@ sudo pacman -Sy --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+
+### Enable LightDM Service
+sudo systemctl enable lightdm
+
 
 echo -e "Setup complete!\n"

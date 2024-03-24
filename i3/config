@@ -121,9 +121,9 @@ default_floating_border pixel 0
 
 smart_borders on
 
-client.focused			#cad3f5 #cad3f5 #cad3f5 #cad3f5
-client.focused_inactive	#24273a #24273a #24273a #24273a
-client.unfocused		#24273a #24273a #24273a #24273a
+client.focused		 	#cad3f5 #cad3f5 #cad3f5 #cad3f5
+client.focused_inactive		#cad3f5 #cad3f5 #cad3f5 #cad3f5
+client.unfocused		#cad3f5 #cad3f5 #cad3f5 #cad3f5
 client.urgent			#E78284 #E78284 #E78284 #E78284
 client.placeholder		#24273a #24273a #24273a #24273a
 

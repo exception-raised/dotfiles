@@ -14,7 +14,7 @@ sudo pacman -Syu --no-confirm \
         rofi    \
         nerd-fonts \
 
-echo -e "Successfully installed packages..>
+echo -e "Successfully installed packages...\n"
 
 echo -e "Copying config files...\n"
 

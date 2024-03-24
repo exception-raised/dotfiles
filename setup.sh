@@ -28,3 +28,12 @@ cp -R picom ~/.config
 cp -R polybar ~/.config
 cp -R pulse ~/.config
 cp -R rofi ~/.config
+
+### Setup yay
+echo -e "Setting up yay...\n"
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+

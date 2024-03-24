@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo -e  "Starting auto Arch setup...\n"
+echo -e "Starting auto Arch setup...\n"
 
-echo -e "Attempting to install packages...>
-sudo pacman -Syu --no-confirm \
+echo -e "Attempting to install packages...\n"
+sudo pacman -Syu --noconfirm \
         alacritty \
         picom   \
         fish    \
@@ -12,7 +12,7 @@ sudo pacman -Syu --no-confirm \
         polybar  \
         nano    \
         rofi    \
-        nerd-fonts \
+        nerd-fonts
 
 echo -e "Successfully installed packages...\n"
 
@@ -32,8 +32,12 @@ cp -R rofi ~/.config
 ### Setup yay
 echo -e "Setting up yay...\n"
 
+### Install required dependencies (Git and base-devel)
+sudo pacman -Sy --noconfirm git base-devel
+
+### Clone yay repository and build
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-
+echo -e "Setup complete!\n"

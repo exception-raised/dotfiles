@@ -16,7 +16,16 @@ sudo pacman -Syu --noconfirm \
         xorg-server \
         xorg-xinit \
         lightdm \
-        lightdm-gtk-greeter 
+        lightdm-gtk-greeter \
+	firefox \
+	npm \
+	go \
+	flameshot \
+	docker    \
+	docker-compose \
+	qbittorrent \
+	postgesql \
+	mysql
 
 echo -e "Successfully installed packages...\n"
 
@@ -44,6 +53,23 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+read -n1 -rep 'Would you like to install Rust? (y/n)' INST
+if [[ $INST == "Y" || $INST == "y" ]]; then 
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	echo -e 'Installed Rust\n'
+fi
+
+
+
+echo -e "Installing AUR packages...\n"
+yay -S --no-confirm \
+	vscodium \
+	obsidian-bin \
+	anki	\
+	thunar \
+	hoppscotch-app-bin \
+	virt-manager \
+	valentina-studio
 ### Enable LightDM Service
 sudo systemctl enable lightdm
 

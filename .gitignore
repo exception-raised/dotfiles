@@ -1,2 +1,3 @@
 systemd/
-user-dirs.*
+user-dirs.local
+user-dirs.dirs

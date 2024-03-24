@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo -e "Starting auto Arch setup...\n"
+sudo pacman -Syu --noconfirm
 
 echo -e "Attempting to install packages...\n"
 sudo pacman -Syu --noconfirm \

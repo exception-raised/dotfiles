@@ -3,7 +3,7 @@
     "profileAssociations": {
         "workspaces": {},
         "emptyWindows": {
-            "1711278318234": "__default__profile__"
+            "1711283937413": "__default__profile__"
         }
     },
     "profileAssociationsMigration": true,
@@ -14,7 +14,10 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1711278318234"
+                "backupFolder": "1711283937413"
+            },
+            {
+                "backupFolder": "1711283948000"
             }
         ]
     },
@@ -56,8 +59,21 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///home/arch/.config/polybar/config.ini",
+                                        "path": "/home/arch/.config/polybar/config.ini",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/.config/polybar/config.ini"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -642,6 +658,13 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.splitEditorInGroup",
+                                    "label": "Split in &&Group"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -741,8 +764,7 @@
                     },
                     {
                         "id": "editor.action.toggleWordWrap",
-                        "label": "&&Word Wrap",
-                        "enabled": false
+                        "label": "&&Word Wrap"
                     }
                 ]
             },
@@ -750,8 +772,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -760,8 +781,7 @@
                     },
                     {
                         "id": "workbench.action.navigateToLastEditLocation",
-                        "label": "&&Last Edit Location",
-                        "enabled": false
+                        "label": "&&Last Edit Location"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1417,6 +1437,11 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+k ctrl+\\"
             },
+            "workbench.action.splitEditorInGroup": {
+                "label": "Ctrl+K Ctrl+Shift+\\",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
+            },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
                 "isNative": false,
@@ -1668,12 +1693,12 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/arch/.config/VSCodium/Backups/1711278318234",
+            "backupPath": "/home/arch/.config/VSCodium/Backups/1711283937413",
             "uiState": {
                 "mode": 1,
-                "x": 333,
+                "x": 648,
                 "y": 55,
-                "width": 299,
+                "width": 609,
                 "height": 722
             }
         },

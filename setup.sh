@@ -25,7 +25,8 @@ sudo pacman -Syu --noconfirm \
 	docker-compose \
 	qbittorrent \
 	postgesql \
-	mysql
+	mysql \
+	lxappearance
 
 echo -e "Successfully installed packages...\n"
 
@@ -73,5 +74,7 @@ yay -S --no-confirm \
 ### Enable LightDM Service
 sudo systemctl enable lightdm
 
+### Set fish as default shell
+chsh $(which fish)
 
 echo -e "Setup complete!\n"

@@ -1,2 +1,3 @@
-2024/03/24-11:05:19.383 5ff7 Creating DB /home/arch/.config/VSCodium/Service Worker/Database since it was missing.
-2024/03/24-11:05:19.396 5ff7 Reusing MANIFEST /home/arch/.config/VSCodium/Service Worker/Database/MANIFEST-000001
+2024/03/24-12:38:56.340 29b2 Reusing MANIFEST /home/arch/.config/VSCodium/Service Worker/Database/MANIFEST-000001
+2024/03/24-12:38:56.340 29b2 Recovering log #3
+2024/03/24-12:38:56.340 29b2 Reusing old log /home/arch/.config/VSCodium/Service Worker/Database/000003.log 

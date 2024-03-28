@@ -58,6 +58,9 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 
+# Open flameshot
+bindsym $mod+F11 exec flameshot gui
+
 exec_always --no-startup polybar bar1 &
 
 # start dmenu (a program launcher)
@@ -119,7 +122,7 @@ smart_gaps off
 default_border pixel 3
 default_floating_border pixel 0
 
-smart_borders on
+#smart_borders on
 
 client.focused		 	#cad3f5 #cad3f5 #cad3f5 #cad3f5
 client.focused_inactive		#cad3f5 #cad3f5 #cad3f5 #cad3f5
@@ -213,3 +216,6 @@ bindsym $mod+r mode "resize"
 
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Start Caffeine
+exec caffeine start

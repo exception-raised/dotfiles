@@ -18,7 +18,7 @@ sudo pacman -Syu --noconfirm \
         xorg-xinit \
         lightdm \
         lightdm-gtk-greeter \
-        firefox \
+        chromium \
         npm \
         go \
         flameshot \
@@ -26,21 +26,21 @@ sudo pacman -Syu --noconfirm \
         docker-compose \
         qbittorrent \
         postgresql \
-        mysql
+        mysql \
+	feh
 
 echo -e "Successfully installed packages...\n"
 
 echo -e "Copying config files...\n"
 cp -R alacritty ~/.config/
-cp -R dconf ~/.config/
 cp -R eww ~/.config/
 cp -R fish ~/.config/
 cp -R i3 ~/.config
 cp -R neofetch ~/.config
 cp -R picom ~/.config
 cp -R polybar ~/.config
-cp -R pulse ~/.config
 cp -R rofi ~/.config
+cp -R Wallpapers ~/.config
 
 ### Setup yay
 echo -e "Setting up yay...\n"

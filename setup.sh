@@ -27,7 +27,8 @@ sudo pacman -Syu --noconfirm \
         qbittorrent \
         postgresql \
         mysql \
-	feh
+	feh \
+ 	php
 
 echo -e "Successfully installed packages...\n"
 

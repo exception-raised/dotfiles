@@ -4,57 +4,43 @@ echo -e "Starting auto Arch setup...\n"
 sudo pacman -Syu --noconfirm
 
 echo -e "Attempting to install packages...\n"
-sudo pacman -Syu --noconfirm \
-        alacritty \
-        picom   \
-        fish    \
-        i3-wm   \
-        neofetch \
-        polybar  \
-        nano    \
-        rofi    \
-        nerd-fonts \
-        xorg-server \
-        xorg-xinit \
-        lightdm \
-        lightdm-gtk-greeter \
-        chromium \
-        npm \
-        go \
-        flameshot \
-        docker    \
-        docker-compose \
-        qbittorrent \
-        postgresql \
-        mysql \
-	feh \
- 	php
+sudo pacman -S --noconfirm \
+    fish \
+    neofetch \
+    rofi \
+    nerd-fonts \
+    npm \
+    go \
+    docker \
+    docker-compose \
+    qbittorrent \
+    postgresql \
+    mysql \
+    feh \
+    php \
+    lightdm \
+    lightdm-gtk-greeter
 
 echo -e "Successfully installed packages...\n"
 
 echo -e "Copying config files...\n"
-cp -R alacritty ~/.config/
-cp -R eww ~/.config/
-cp -R fish ~/.config/
-cp -R i3 ~/.config
-cp -R neofetch ~/.config
-cp -R picom ~/.config
-cp -R polybar ~/.config
-cp -R rofi ~/.config
-cp -R Wallpapers ~/.config
+mkdir -p ~/.config
+cp -R kitty fish hypr waybar hyprpaper wofi wlogout Wallpapers ~/.config
 
-### Setup yay
+# Setup yay
 echo -e "Setting up yay...\n"
-
-### Install required dependencies (Git and base-devel)
 sudo pacman -Sy --noconfirm git base-devel
 
-### Clone yay repository and build
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
+if [ ! -d "yay" ]; then
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm
+    cd ..
+fi
 
-read -n1 -p 'Would you like to install Rust? (y/n)' INST
+# Optional Rust installation
+read -n1 -p 'Would you like to install Rust? (y/n) ' INST
+echo
 if [[ $INST == "Y" || $INST == "y" ]]; then 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     echo -e 'Installed Rust\n'
@@ -62,19 +48,39 @@ fi
 
 echo -e "Installing AUR packages...\n"
 yay -S --noconfirm \
-    vscodium \
     obsidian-bin \
     anki \
     thunar \
     hoppscotch-app-bin \
     virt-manager \
-    valentina-studio \
-    lxappearance
+    lxappearance \
+    catnap-git \
+    visual-studio-code-bin \
+    spotify \
+    mullvad-vpn \
+    btop-git \
+    zen-browser-bin \
+    waybar-git \
+    hyprland-git \
+    hyprpaper-git \
 
-### Enable LightDM Service
+# Enable LightDM Service
+echo -e "Enabling LightDM service...\n"
 sudo systemctl enable lightdm
 
-### Set fish as default shell
-sudo chsh -s $(which fish) $USER
+# Set fish as default shell
+echo -e "Setting fish as default shell...\n"
+chsh -s $(which fish)
+
+sudo tee /usr/share/wayland-sessions/hyprland.desktop > /dev/null <<EOL
+[Desktop Entry]
+Name=Hyprland
+Comment=Hyprland Wayland Session
+Exec=Hyprland
+Type=Application
+DesktopNames=Hyprland
+EOL
+
+echo -e "Hyprland setup complete!\n"
 
 echo -e "Setup complete!\n"

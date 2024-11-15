@@ -1,0 +1,18 @@
+function gruvbox_colors
+    set -g color_0 '#fbf1c7'
+    set -g color_1 '#fb4934'
+    set -g color_2 '#b8bb26'
+    set -g color_3 '#fabd2f'
+    set -g color_4 '#83a598'
+    set -g color_5 '#d3869b'
+    set -g color_6 '#8ec07c'
+    set -g color_7 '#ebdbb2'
+    set -g color_8 '#7c6f64'
+    set -g color_9 '#fb4934'
+    set -g color_10 '#b8bb26'
+    set -g color_11 '#fabd2f'
+    set -g color_12 '#83a598'
+    set -g color_13 '#d3869b'
+    set -g color_14 '#8ec07c'
+    set -g color_15 '#ffffff'
+end
